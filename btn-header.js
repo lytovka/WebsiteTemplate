@@ -4,8 +4,9 @@ function btnHeader(){
     if(window.innerWidth > 768) { 
         element.parentNode.removeChild(element);
     }
+    else return;
 }
 
-btnHeader();
+window.addEventListener("resize",btnHeader());
 
 
