@@ -4,18 +4,21 @@ html, body {
     margin:0;
     padding:0;
     overflow-x: hidden;
+    /* scroll-behavior: smooth; */
 }
 
 /* Navbar and background image */
 
 header{
     background-color: black;
+    border-bottom-right-radius: 3%;
+    border-bottom-left-radius: 3%;
 }
 
 
 nav > .container{
-    padding: 1% 0 ;
-    background-color: black;
+    /* padding: 1% 0 ; */
+    /* background-color: black; */
 }
 
 .navbar-brand{
@@ -36,15 +39,15 @@ a .btn-header{
     .nav-item:nth-child(-n+2){
     border-right: 1px solid white;
 }
+    a .btn-header{
+        display: none;
+    }
 }
 
-@media(max-width: 1024px){
+@media(max-width: 1023px){
     header{
         height: 100vh !important;
     }
-    /* .btn-header{
-        display: none;
-    } */
 }
 
 .nav-link{
@@ -70,6 +73,13 @@ h1{
     .profile-pic{
         transform: none;
     }
+    
+}
+
+@media screen and (max-width: 600px){
+    h1{
+        font-size: 1.3rem !important;
+    }
 }
 
 /* About section  */
@@ -77,16 +87,19 @@ h1{
 #about{
     position:relative;
     padding: 3% 0;
+    height: 70vh;
 }
 
 .row{
     text-align: center;
+    align-content: center;
+    /* height: 60vh;
+    align-items: center; */
 }
 
 .about-image{
-    width: 40%;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    width: 50%;
+    height: auto;
 }
 
 #about .about-image:hover{
@@ -100,11 +113,22 @@ h1{
 h2{
     text-align: center;
     margin: 2rem !important;
+    font-size: 2rem !important;
+
 }
 
-
-
 @media(max-width: 800px){
+    #about{
+        height: 100vh;
+    }
+    .about-image{
+        width: 30%;
+        /* height: auto; */
+        margin: 3% 0;
+    }
+}
+
+@media(max-height: 600px){
     .about-image{
         width: 30%;
     }
@@ -114,13 +138,15 @@ h2{
 
 #portfolio{
     background-color: black;
-    height: 60vh;
+    height: 70vh;
+    border-radius: 3%;
 }
 
 h3{
     color: white;
     text-align: center;
-    padding-top: 2%;
+    padding: 1% 0;
+    font-size: 2rem !important;
 }
 
 .carousel-item{
@@ -128,10 +154,10 @@ h3{
 }
 
 .portfolio-picture{
-    width: 70%;
+    width: 100%;
+    height: auto;
     display: block;
     margin: 0 auto;
-    padding: 2% 0;
 }
 
 @media screen and (max-width: 1024px){
@@ -139,12 +165,11 @@ h3{
         padding-top: none;
     }
     #portfolio{
-        height: 33vh;
+        height: 50vh;
         padding-bottom: 2%;
     }
     .portfolio-picture{
-        width: 90%;
-        padding: auto;
+        /* width: 100%; */
     }
     .carousel-item{
         padding: 5% 2%
@@ -152,6 +177,21 @@ h3{
 }
 
 /* Contact me section */
+
+#contact{
+    height:70vh;
+}
+
+h4{
+    text-align: center;
+    padding: 4% 0;
+    font-size: 2rem !important;
+}
+
+#contact .row{
+    height: 60vh;
+    align-items: center;
+}
 
 form{
     width: 80%;
@@ -183,12 +223,17 @@ form{
     border: 2px solid red;
 }
 
+@media(max-width: 1024px){
 
+    #contact{
+        height: 100vh;
+        padding: 10% 0 0;
+    }
 
-@media(max-width: 1200px){
     form{
         width: 80%;
     }
+    
 }
 
 /* Footer */
@@ -196,6 +241,8 @@ form{
 footer{
     position: relative;
     background-color: black;
+    border-top-right-radius: 3%;
+    border-top-left-radius: 3%;
     height: 20%;
 }
 

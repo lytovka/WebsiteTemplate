@@ -33,4 +33,4 @@ function smoothScroll(destination, duration) {
 
 
 
-smoothScroll("about", 1000);
+document.addEventListener("click",smoothScroll("contact", 1000));

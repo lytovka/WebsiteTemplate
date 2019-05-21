@@ -1,12 +1,13 @@
 function btnHeader(){
-    var element = document.querySelector(".btn-header");
-
-    if(window.innerWidth > 768) { 
-        element.parentNode.removeChild(element);
+    var el = document.querySelector(".btn-header");
+    if(window.innerWidth > 800){
+        el.parentNode.removeChild(el);
     }
-    else return;
+    else el.parentNode.appendChild(el);
 }
 
-window.addEventListener("resize",btnHeader());
+btnHeader();
 
-
+window.addEventListener("resize", ()=>{
+    btnHeader();
+});
