@@ -1,13 +1,4 @@
-function btnHeader(){
-    var el = document.querySelector(".btn-header");
-    if(window.innerWidth > 800){
-        el.parentNode.removeChild(el);
-    }
-    else el.parentNode.appendChild(el);
-}
-
-btnHeader();
-
-window.addEventListener("resize", ()=>{
-    btnHeader();
+$(document).ready(function(){
+    if($(window).width() > 800) $(".btn-header").remove();
+    else $(".btn-header").add();
 });
