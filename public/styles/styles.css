@@ -4,7 +4,6 @@ html, body {
     margin:0;
     padding:0;
     overflow-x: hidden;
-    /* scroll-behavior: smooth; */
 }
 
 /* Navbar and background image */
@@ -13,12 +12,6 @@ header{
     background-color: black;
     border-bottom-right-radius: 3%;
     border-bottom-left-radius: 3%;
-}
-
-
-nav > .container{
-    /* padding: 1% 0 ; */
-    /* background-color: black; */
 }
 
 .navbar-brand{
@@ -48,6 +41,12 @@ a .btn-header{
     header{
         height: 100vh !important;
     }
+    .navbar{
+        border: 1px solid white;
+    }
+    .title > .col-lg-6, .title > .col-lg-12{
+        
+    }
 }
 
 .nav-link{
@@ -59,9 +58,9 @@ a .btn-header{
 }
 
 .profile-pic{
-    width: 90%;
+    width: 100%;
     left: 20%;
-    transform: rotate(-15deg);
+    transform: rotate(-10deg);
 }
 
 h1{
@@ -79,7 +78,9 @@ h1{
 
 @media screen and (max-width: 600px){
     h1{
-        font-size: 1.3rem !important;
+        font-size: 2rem !important;
+        width: 100%;
+        margin: 0.5rem 0 !important;
     }
 }
 
@@ -94,8 +95,6 @@ h1{
 .row{
     text-align: center;
     align-content: center;
-    /* height: 60vh;
-    align-items: center; */
 }
 
 .about-image{
@@ -124,8 +123,7 @@ h2{
     }
     .about-image{
         width: 30%;
-        /* height: auto; */
-        margin: 3% 0;
+        margin: 5% 0;
     }
 }
 
@@ -168,9 +166,6 @@ h3{
     #portfolio{
         height: 50vh;
         padding-bottom: 2%;
-    }
-    .portfolio-picture{
-        /* width: 100%; */
     }
     .carousel-item{
         padding: 5% 2%
@@ -259,12 +254,10 @@ footer{
     .footer-huyuter-icons{
         width: 50%;
         justify-content: space-around;
-        /* padding: 1.5rem; */
     }
 }
 
 .footer-huyuter-icon img{
-    /* padding: 0 2rem 0 2rem; */
     padding-left: 1%;
     padding-right: 1%;
     width: 35px;
