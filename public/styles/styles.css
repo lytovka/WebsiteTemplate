@@ -4,6 +4,13 @@ html, body {
     margin:0;
     padding:0;
     overflow-x: hidden;
+    background-color: #F5F5F5;
+}
+
+header, #portfolio{
+    -webkit-box-shadow: 0px 14px 12px -8px rgba(212,154,55,1);
+    -moz-box-shadow: 0px 14px 12px -8px rgba(212,154,55,1);
+    box-shadow: 0px 14px 12px -8px rgba(212,154,55,1);
 }
 
 /* Navbar and background image */
@@ -12,6 +19,7 @@ header{
     background-color: black;
     border-bottom-right-radius: 3%;
     border-bottom-left-radius: 3%;
+    
 }
 
 .navbar-brand{
@@ -42,7 +50,7 @@ a .btn-header{
         height: 100vh !important;
     }
     .navbar{
-        border: 1px solid white;
+        border: 1px solid rgba(212,154,55,1);
     }
     .title > .col-lg-6, .title > .col-lg-12{
         
@@ -68,7 +76,7 @@ h1{
     font-weight: 700;
 }
 
-@media(max-width: 1023px){
+@media screen and (max-width: 1023px){
     .profile-pic{
         transform: none;
         width: 100%;
@@ -88,7 +96,7 @@ h1{
 
 #about{
     position:relative;
-    padding: 3% 0;
+    margin: 3% 0;
     height: 70vh;
 }
 
@@ -127,6 +135,12 @@ h2{
     }
 }
 
+@media screen and (min-height: 1200px){
+    #about{
+        height: 40vh;
+    }
+}
+
 @media(max-height: 600px){
     .about-image{
         width: 30%;
@@ -160,9 +174,7 @@ h3{
 }
 
 @media screen and (max-width: 1024px){
-    h3{
-        padding-top: none;
-    }
+    
     #portfolio{
         height: 50vh;
         padding-bottom: 2%;
@@ -180,9 +192,12 @@ h3{
 
 h4{
     text-align: center;
-    padding: 4% 0;
+    padding: 4% 0 6%;
     font-size: 2rem !important;
+    line-height: 1.2;
 }
+
+/* Rewrite  !!!*/
 
 #contact .row{
     height: 60vh;
@@ -216,18 +231,30 @@ form{
     height:80%;
     width:80%;
     position:absolute;
-    border: 2px solid red;
+    border: 1px solid rgba(212,154,55,1);
 }
 
-@media(max-width: 1024px){
+@media screen and (max-width: 1023px){
 
     #contact{
         height: 100vh;
         padding: 10% 0 0;
     }
-
     form{
         width: 80%;
+    }
+}
+
+@media screen and (min-height: 1200px){
+    #contact{
+        height: 40vh;
+    }
+    h4{
+        padding-bottom: 0;
+    }
+    #contact .row{
+        height: 40vh;
+        align-items: center;
     }
     
 }
