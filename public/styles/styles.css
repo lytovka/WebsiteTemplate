@@ -1,16 +1,16 @@
 html, body {
-    width: 100%;
-    height: 100%;
     margin:0;
     padding:0;
     overflow-x: hidden;
     background-color: #F5F5F5;
+    --yellow-color: rgba(212,154,55,1);
+    font-family: 'Heebo', sans-serif !important;
 }
 
 header, #portfolio{
-    -webkit-box-shadow: 0px 14px 12px -8px rgba(212,154,55,1);
-    -moz-box-shadow: 0px 14px 12px -8px rgba(212,154,55,1);
-    box-shadow: 0px 14px 12px -8px rgba(212,154,55,1);
+    -webkit-box-shadow: 0px 14px 12px -8px var(--yellow-color);
+    -moz-box-shadow: 0px 14px 12px -8px var(--yellow-color);
+    box-shadow: 0px 14px 12px -8px var(--yellow-color);
 }
 
 /* Navbar and background image */
@@ -19,43 +19,36 @@ header{
     background-color: black;
     border-bottom-right-radius: 3%;
     border-bottom-left-radius: 3%;
-    
+    height: 100vh;    
 }
-
 .navbar-brand{
     font-weight: 600;
-    font-size: 1.5rem !important;
+    font-size: 2rem;
     letter-spacing: 4px;
 }
-
 .nav-item{
     padding: 0 2rem;
-}
-
-a .btn-header{
-    color: white;
 }
 
 @media(min-width: 1024px){
     .nav-item:nth-child(-n+2){
     border-right: 1px solid white;
 }
-    a .btn-header{
-        display: none;
-    }
+
 }
 
 @media(max-width: 1023px){
-    header{
-        height: 100vh !important;
-    }
     .navbar{
-        border: 1px solid rgba(212,154,55,1);
-    }
-    .title > .col-lg-6, .title > .col-lg-12{
-        
+        border-bottom: 1px solid var(--yellow-color);
     }
 }
+
+@media screen and (min-height: 1200px){
+    header{
+        height: 50vh;
+    }
+}
+
 
 .nav-link{
     font-size: 1.5rem;
@@ -74,6 +67,11 @@ a .btn-header{
 h1{
     color: rgb(250, 250, 250);
     font-weight: 700;
+    font-size: 3rem !important;
+}
+
+h1 > span{
+    border-bottom: 3px solid var(--yellow-color);
 }
 
 @media screen and (max-width: 1023px){
@@ -84,11 +82,21 @@ h1{
     
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 768px){
     h1{
         font-size: 2rem !important;
         width: 100%;
-        margin: 0.5rem 0 !important;
+        margin: 4rem 0 !important;
+    }
+    .profile-pic{
+        transform: rotate(90deg);
+    }
+}
+
+@media screen and(max-width: 500px){
+    h1{
+        letter-spacing: 0;
+        font-size: 1rem !important;
     }
 }
 
@@ -97,7 +105,7 @@ h1{
 #about{
     position:relative;
     margin: 3% 0;
-    height: 70vh;
+    height: 60vh;
 }
 
 .row{
@@ -125,13 +133,29 @@ h2{
 
 }
 
-@media(max-width: 800px){
+@media(max-width: 1000px){
     #about{
         height: 100vh;
     }
     .about-image{
         width: 30%;
-        margin: 5% 0;
+        margin: 2% 0;
+    }
+}
+
+@media(max-width: 774px){
+    #about{
+        height: 100vh;
+    }
+    .about-image{
+        width: 30%;
+        margin: 2% 0;
+    }
+}
+
+@media(max-width: 500px){
+    .about-image{
+        width: 40%;
     }
 }
 
@@ -176,11 +200,21 @@ h3{
 @media screen and (max-width: 1024px){
     
     #portfolio{
-        height: 50vh;
+        height: 70vh;
         padding-bottom: 2%;
     }
     .carousel-item{
         padding: 5% 2%
+    }
+
+    .portfolio-picture{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    #portfolio{
+        height: 45vh;
     }
 }
 
@@ -231,7 +265,7 @@ form{
     height:80%;
     width:80%;
     position:absolute;
-    border: 1px solid rgba(212,154,55,1);
+    border: 1px solid var(--yellow-color);
 }
 
 @media screen and (max-width: 1023px){
@@ -243,6 +277,22 @@ form{
     form{
         width: 80%;
     }
+}
+
+@media screen and (max-width: 767px){
+
+    h4{
+        padding: 10% 0 20%;
+    }
+
+}
+
+@media screen and (max-width: 400px){
+
+    h4{
+        padding: 10% 0 25%;
+    }
+
 }
 
 @media screen and (min-height: 1200px){

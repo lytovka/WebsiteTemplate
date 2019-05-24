@@ -1,5 +1,5 @@
 (function ($) {
-
+    
     $(document).ready(function () {
         var scrollLink = $(".scroll-link");
         scrollLink.click(function (event) {
@@ -13,7 +13,11 @@
             }
         });
 
+        if($(window).width() < 968){
+			$(".navbar-nav > li > a").bind("click", function(event){
+				$("#navbarSupportedContent").collapse("hide");
+			});
+		}
     });
 
 })(this.jQuery);
-
