@@ -1,6 +1,6 @@
 # WebsiteTemplate
 
-![Screenshot](Capture.png)
-![Screenshot](Capture1.png)
-![Screenshot](Capture2.png)
+![Capture](Capture.png)
+![Capture2](Capture1.png)
+![Capture3](Capture2.png)
 
